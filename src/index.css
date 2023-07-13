@@ -82,6 +82,18 @@ span {
   line-height: 1.75em;
 }
 
+/* Sections */
+
+/* Hero-section */
+
+header {
+  display: flex;
+}
+
+header ul li {
+  display: flex;
+}
+
 /*=======================================
     #Variables
 =========================================*/
@@ -111,7 +123,7 @@ span {
 /*=======================================
     TYPOGRAPHY
 =========================================*/
-/* 
+/*
   1. The Poppins font. This is the main font.
   https://fonts.googleapis.com/css?family=Poppins
 
