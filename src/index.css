@@ -99,22 +99,12 @@ ul {
   padding: 0;
 }
 
-/* ul li {
-  display: inline-block;
-  position: relative;
-} */
-
 a:hover,
 .logo:hover {
   color: var(--hover-color);
 }
 
 /* Sections */
-
-/* .inner-container {
-  max-width: 1720px;
-  overflow: hidden;
-} */
 
 /* Hero-section */
 
@@ -184,11 +174,21 @@ header * {
 
 .social li {
   flex: 0;
-  padding: 0 16px;
+  padding: 0 15px;
+  position: relative;
 }
 
-.social li:hover {
-  background: var(--link-color);
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  left: 0px;
+}
+
+.circle:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .main {
@@ -212,16 +212,14 @@ header * {
     var(--start-gradient) 0%,
     var(--end-gradient) 100%
   );
-  width: 180px;
   border: 0;
-  height: 30px;
+  height: 60px;
   font-size: 0.9em;
   font-weight: var(--bold);
   text-transform: capitalize;
   color: var(--white);
-  display: inline-flex;
-  padding: 30px 30px 30px 5px;
-  align-items: center;
+  padding: 15px 35px;
+  text-align: center;
 }
 
 .button-gradient:hover {
