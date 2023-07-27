@@ -1,16 +1,19 @@
 /* Global */
 
 :root {
+  --base-font: 20px;
   --primary-font: "Poppins";
   --secondary-font: "Courier";
   --white: #ffffff;
   --primary-bg: #0a0c11;
   --primary-text: #abadb3;
   --primary-color: #2292b1;
-  --secondary-color: #1b3385;
-  --tertiary-color: #25c5c9;
+  --start-gradient: #1b3385;
+  --end-gradient: #25c5c9;
   --link-color: #abadb3;
   --hover-color: #2292b1;
+  --sub-menu-color: #222;
+  --border-color: #323438;
   --normal: 400;
   --medium: 500;
   --semi-bold: 600;
@@ -20,8 +23,8 @@
 body {
   box-sizing: border-box;
   font-family: var(--primary-font);
-  font-size: 1em;
-  color: var(--white);
+  font-size: var(--base-font);
+  color: var(--primary-text);
   background-color: var(--primary-bg);
 }
 
@@ -30,11 +33,20 @@ body {
 *::after {
   box-sizing: inherit;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font);
+  color: var(--white);
+  margin: 0;
+}
 h1 {
-  font-size: 2.7em;
+  font-size: 4em;
   font-weight: var(--medium);
-  line-height: 4.3em;
+  line-height: 1.5em;
 }
 
 h2 {
@@ -67,26 +79,159 @@ h6 {
   line-height: 1.4em;
 }
 
-p {
-  /* Application text */
-  font-size: 1em;
-  font-weight: var(--normal);
-  line-height: 1.75em;
+.lowlight {
+  opacity: 0.5;
 }
 
-span {
-  /* Preformatted */
-  font-family: var(--secondary-font);
-  font-size: 1em;
+a {
   font-weight: var(--normal);
-  line-height: 1.75em;
+  text-decoration: none;
+  color: var(--primary-text);
+  font-size: 0.9em;
+  font-style: normal;
+  line-height: 2.4em;
+  text-transform: capitalize;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+a:hover,
+.logo:hover {
+  color: var(--hover-color);
+}
+
+/* Sections */
+
+/* Hero-section */
+
+header {
+  margin: 0 auto;
+  padding-left: 90px;
+  padding-right: 100px;
+  width: 100%;
+  height: 120px;
+  display: flex;
+}
+
+header * {
+  flex: 1;
+}
+
+.logo {
+  font-weight: var(--bold);
+  font-size: 1.6em;
+  color: var(--white);
+}
+
+.selected {
+  color: var(--hover-color);
+}
+
+.nav-header li {
+  margin: 0 18px;
+}
+
+.nav-header li:nth-child(2) ul {
+  display: none;
+}
+
+.nav-header li:nth-child(2) {
+  min-width: 110px;
+  position: relative;
+}
+
+.nav-header li:nth-child(2):hover ul {
+  display: block;
+}
+
+.sub-nav-header {
+  position: absolute;
+  top: 44px;
+  left: -20px;
+  z-index: 99;
+}
+
+.sub-nav-header li {
+  width: 235px;
+  height: 44px;
+  background-color: var(--sub-menu-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-left: 23px;
+}
+
+.sub-nav-header a {
+  font-size: 0.75em;
+  font-weight: var(--normal);
+}
+
+.social {
+  justify-content: flex-end;
+}
+
+.social li {
+  flex: 0;
+  padding: 0 15px;
+  position: relative;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  left: 0px;
+}
+
+.circle:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.main {
+  width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+.main p {
+  margin-bottom: 50px;
+  font-size: 1.2em;
+  font-weight: var(--light);
+}
+
+.button-gradient {
+  border-radius: 30px;
+  background: linear-gradient(
+    90deg,
+    var(--start-gradient) 0%,
+    var(--end-gradient) 100%
+  );
+  border: 0;
+  height: 60px;
+  font-size: 0.9em;
+  font-weight: var(--bold);
+  text-transform: capitalize;
+  color: var(--white);
+  padding: 15px 35px;
+  text-align: center;
+}
+
+.button-gradient:hover {
+  color: var(--primary-bg);
+  background: var(--white);
 }
 
 /*=======================================
     #Variables
 =========================================*/
 
-/**
+/*
   TABLE OF CONTENTS
 
   COLORS
@@ -111,7 +256,7 @@ span {
 /*=======================================
     TYPOGRAPHY
 =========================================*/
-/* 
+/*
   1. The Poppins font. This is the main font.
   https://fonts.googleapis.com/css?family=Poppins
 
