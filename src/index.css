@@ -35,6 +35,7 @@
   --end-gradient: #25c5c9;
   --link-color: #abadb3;
   --hover-color: #2292b1;
+  --border-margin: #383636;
 
   /*==============================
   NEUTRAL COLORS
@@ -139,9 +140,9 @@ h3 {
 }
 
 h4 {
-  font-size: 1.4em;
+  font-size: 1.1em;
   font-weight: var(--bold);
-  line-height: 2.1em;
+  line-height: 1em;
 }
 
 h5 {
@@ -207,7 +208,7 @@ img {
   font-weight: var(--bold);
   text-transform: capitalize;
   color: var(--white);
-  padding: 10px 35px;
+  padding: 16px 25px;
   text-align: center;
 }
 
@@ -295,7 +296,8 @@ main > * {
 }
 
 .cta {
-  margin-top: 16px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .hero-video video {
@@ -330,7 +332,84 @@ main > * {
 .number-box > * {
   display: flex;
   justify-content: center;
-  margin-top: -1px;
+  margin: 2px;
+}
+
+/* Featured Content-Section && Contact Us-section*/
+
+.what-we-do {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.padding-subtitle {
+  padding: 20px 0 10px 0;
+}
+
+.figure-creative {
+  border: 1px solid var(--border-margin);
+  margin-bottom: 30px;
+  padding: 35px 35px;
+}
+
+.figure-creative p {
+  font-size: 1em;
+  line-height: 32px;
+  margin: 20px 0 30px 0;
+}
+
+.figure-creative .underline {
+  padding-bottom: 8px;
+  font-size: 0.8em;
+  border-bottom: 2px solid var(--hover-color);
+  position: relative;
+}
+
+.figure-mobile {
+  border: 1px solid var(--border-margin);
+  margin-bottom: 30px;
+  padding: 35px 35px;
+}
+
+.figure-mobile p {
+  font-size: 1em;
+  line-height: 32px;
+  margin: 20px 0 30px 0;
+}
+
+.figure-mobile .underline {
+  padding-bottom: 8px;
+  font-size: 0.8em;
+  border-bottom: 2px solid var(--hover-color);
+  position: relative;
+}
+
+.figure-vintage {
+  border: 1px solid var(--border-margin);
+  margin-bottom: 30px;
+  padding: 35px 35px;
+}
+
+.figure-vintage p {
+  font-size: 1em;
+  line-height: 32px;
+  margin: 20px 0 30px 0;
+}
+
+.figure-vintage .underline {
+  padding-bottom: 8px;
+  font-size: 0.8em;
+  border-bottom: 2px solid var(--hover-color);
+  position: relative;
+}
+
+.promotional-contact {
+  text-align: center;
+  margin: 100px 0;
+}
+
+.promotional-contact h2 {
+  padding: 10px 0 40px 0;
 }
 
 /*=======================================
@@ -436,6 +515,11 @@ main > * {
     max-width: 760px;
   }
 
+  .cta {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
   .our-services {
     display: flex;
     margin: 140px 0;
@@ -469,6 +553,56 @@ main > * {
 
   .our-services-layout p {
     margin-top: 90px;
+  }
+
+  .what-we-do {
+    margin-top: -70px;
+  }
+
+  .what-we-do-figure {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .figure-creative:hover .creative-lights img {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .figure-mobile:hover .mobile-photography img {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .figure-vintage:hover .vintage-camera img {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .figure-creative {
+    border: 2px solid var(--border-margin);
+    margin-bottom: 30px;
+    padding: 35px 35px;
+    flex: 1;
+  }
+
+  figure {
+    overflow: hidden;
+  }
+
+  .figure-mobile {
+    border: 2px solid var(--border-margin);
+    margin-bottom: 30px;
+    padding: 35px 35px;
+    flex: 1;
+  }
+
+  .figure-vintage {
+    border: 2px solid var(--border-margin);
+    margin-bottom: 30px;
+    padding: 35px 35px;
+    flex: 1;
   }
 }
 
