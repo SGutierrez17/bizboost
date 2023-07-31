@@ -140,7 +140,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: var(--bold);
   line-height: 1em;
 }
@@ -405,11 +405,91 @@ main > * {
 
 .promotional-contact {
   text-align: center;
-  margin: 100px 0;
+  margin: 50px 0;
+  background-image: url(/src/images/promotional-contact.jpg);
+  max-width: 100%;
+  height: 350px;
+  padding: 60px 0;
 }
 
 .promotional-contact h2 {
   padding: 10px 0 40px 0;
+}
+
+/* Footer-section */
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+#email {
+  font-size: 0.7em;
+  padding: 13px;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  width: 210px;
+}
+
+.email-button {
+  font-size: 0.7em;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 0;
+  padding: 14px 16px 13.5px;
+  margin-left: -7px;
+}
+
+.footer-selected {
+  color: var(--hover-color);
+}
+
+.footer-newsletter {
+  flex-direction: column;
+  gap: 35px;
+}
+
+.footer-links {
+  margin-top: -30px;
+  flex-direction: column;
+}
+
+.footer-support {
+  flex-direction: column;
+}
+
+.footer-links .footer-quick-links {
+  margin-bottom: 20px;
+}
+
+.footer-costumer-support {
+  margin-bottom: 20px;
+}
+
+.footer-copyright {
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.footer-copyright .footer-social {
+  gap: 25px;
+}
+
+span.footer-underline {
+  margin-left: -30px;
+  width: 400px;
+  padding-bottom: 8px;
+  font-size: 0.8em;
+  border-bottom: 2px solid var(--border-margin);
+  position: relative;
 }
 
 /*=======================================
@@ -604,12 +684,19 @@ main > * {
     padding: 35px 35px;
     flex: 1;
   }
+
+  .promotional-contact {
+    text-align: center;
+    margin: 100px 0;
+    background-image: url(/src/images/promotional-contact.jpg);
+    max-width: 100%;
+    height: 460px;
+    padding: 120px 0;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
-
-/*=======================================
-  MOBILE FIRST
-=========================================*/
-
-/*=======================================
-  DESKTOP BREAKPOINTS
-=========================================*/
