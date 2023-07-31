@@ -442,7 +442,7 @@ footer {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   border: 0;
-  padding: 14px 16px 13.5px;
+  padding: 14px 16px 13.7px;
   margin-left: -7px;
 }
 
@@ -476,7 +476,7 @@ footer {
   font-size: 0.8em;
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-left: 30px;
 }
 
 .footer-copyright .footer-social {
@@ -485,8 +485,6 @@ footer {
 
 span.footer-underline {
   margin-left: -30px;
-  width: 400px;
-  padding-bottom: 8px;
   font-size: 0.8em;
   border-bottom: 2px solid var(--border-margin);
   position: relative;
@@ -694,9 +692,47 @@ span.footer-underline {
     padding: 120px 0;
   }
 
+  #email {
+    font-size: 0.7em;
+    padding: 13px;
+    background-color: transparent;
+    border-radius: 4px;
+    color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    width: 250px;
+  }
+
   footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+  }
+
+  .footer-newsletter > * {
+    flex-direction: column;
+    margin-left: -136px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: -180px;
+  }
+
+  .footer-support {
+    flex-direction: column;
+    margin: 10px;
+  }
+  span.footer-underline {
+    font-size: 0.8em;
+    border-bottom: 1px solid var(--border-margin);
+  }
+  .footer-copyright {
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
   }
 }
