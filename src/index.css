@@ -358,11 +358,18 @@ main > * {
   margin: 20px 0 30px 0;
 }
 
-.figure-creative .underline {
-  padding-bottom: 8px;
-  font-size: 0.8em;
-  border-bottom: 2px solid var(--hover-color);
+.figure-creative a {
   position: relative;
+}
+
+.figure-creative a::after {
+  content: "";
+  border-bottom: 2px solid var(--hover-color);
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -7px;
 }
 
 .contact-us-layout {
@@ -467,6 +474,26 @@ footer {
 
 .footer-letter {
   font-size: 1.2em;
+}
+
+.float {
+  position: fixed;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    var(--start-gradient) 0%,
+    var(--end-gradient) 100%
+  );
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 20px;
+  padding: 0px;
 }
 
 /*=======================================
@@ -633,6 +660,17 @@ footer {
     padding: 35px 60px;
   }
 
+  .figure-creative a:hover::after {
+    content: "";
+    border-bottom: 2px solid var(--hover-color);
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    left: 0;
+    bottom: -7px;
+    transition: all 0.5s ease;
+  }
+
   .contact-us-layout {
     text-align: center;
     padding: 180px 50px;
@@ -704,5 +742,29 @@ footer {
 
   .footer-social {
     padding: 20px 0 5px;
+  }
+  .float {
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(
+      90deg,
+      var(--start-gradient) 0%,
+      var(--end-gradient) 100%
+    );
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    margin: 20px;
+    padding: 0px;
+  }
+  .float:hover {
+    background: var(--white);
+    color: var(--background);
+    transition: all 0.8s ease;
   }
 }
